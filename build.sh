@@ -28,7 +28,7 @@ VERSION=`date +%Y%m%d`
 # get time of startup
 res1=$(date +%s.%N)
 
-echo -e "${cya}B{bldcya}u{cya}i{bldcya}l{cya}d{bldcya}i{cya}n{bldcya}g ${bldylw}JELLYBAM ${bldred}VERSION ${txtrst}";
+echo -e "${cya}B${bldcya}u${cya}i${bldcya}l${cya}d${bldcya}i${cya}n${bldcya}g ${bldylw}JELLYBAM ${bldred}VERSION $VERSION ${txtrst}";
 
 # sync with latest sources
 echo -e ""
