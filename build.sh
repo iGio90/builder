@@ -28,7 +28,11 @@ VERSION=`date +%Y%m%d`
 # get time of startup
 res1=$(date +%s.%N)
 
-echo -e "${cya}B${bldcya}u${cya}i${bldcya}l${cya}d${bldcya}i${cya}n${bldcya}g ${bldylw}JELLYBAM ${bldred}VERSION $VERSION ${txtrst}";
+# we don't allow scrollback buffer
+echo -e '\0033\0143'
+clear
+
+echo -e "${cya}Building ${bldgrn}B ${bldppl}A ${bldblu}M ${bldylw}v$VERSION ${txtrst}";
 
 # sync with latest sources
 echo -e ""
