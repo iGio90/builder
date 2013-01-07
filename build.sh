@@ -12,7 +12,9 @@ cya=$(tput setaf 6)             #  cyan
 txtbld=$(tput bold)             # Bold
 bldred=${txtbld}$(tput setaf 1) #  red
 bldgrn=${txtbld}$(tput setaf 2) #  green
+bldylw=${txtbld}$(tput setaf 3) #  yellow
 bldblu=${txtbld}$(tput setaf 4) #  blue
+bldppl=${txtbld}$(tput setaf 5) #  purple
 bldcya=${txtbld}$(tput setaf 6) #  cyan
 txtrst=$(tput sgr0)             # Reset
 
@@ -23,11 +25,10 @@ THREADS="$3"
 # get current version
 VERSION=`date +%Y%m%d`
 
-
 # get time of startup
 res1=$(date +%s.%N)
 
-echo -e "${cya}Building ${bldcya}jellybam $VERSION ${txtrst}";
+echo -e "${cya}B{bldcya}u{cya}i{bldcya}l{cya}d{bldcya}i{cya}n{bldcya}g ${bldylw}JELLYBAM ${bldred}VERSION ${txtrst}";
 
 # sync with latest sources
 echo -e ""
