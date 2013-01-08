@@ -62,16 +62,3 @@ echo -e ""
 # finished? get elapsed time
 res2=$(date +%s.%N)
 echo "${bldgrn}Total time elapsed: ${txtrst}${grn}$(echo "($res2 - $res1) / 60"|bc ) minutes ($(echo "$res2 - $res1"|bc ) seconds) ${txtrst}"
-
-# Full rom builder
-echo -e "now building the full rom package"
-cd out/target/product/$DEVICE/ && mkdir tmp;
-cd out/target/product/$DEVICE/ && mv jelly*.zip tmp/;
-cd out/target/product/$DEVICE/tmp/ && unzip *.zip;
-cd out/target/product/$DEVICE/tmp/ && rm -f system/app/Provision.apk system/app/QuickSearchBox.apk system/app/SetupWizard.apk system/app/Velvet.apk;
-cd out/target/product/$DEVICE/tmp/ && cp -r jellybam/$DEVICE/system/* system/;
-cd out/target/product/$DEVICE/tmp/ && rm -f *.zip;
-cd out/target/product/$DEVICE/tmp/ && zip -r -q jellybam_$DEVICE.STABLE_4.0.0_$(date "+%Y%m%d").zip *;
-cd out/target/product/$DEVICE/tmp/ && mv jell*.zip /var/rom/final/nightlies/;
-cd out/target/product/$DEVICE/ && rm -f -r tmp && rm -f jellyb*;
-
