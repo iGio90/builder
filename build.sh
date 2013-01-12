@@ -43,6 +43,9 @@ then
    echo -e ""
 fi
 
+# cleaning build properties
+rm out/target/product/$DEVICE/system/build.prop
+
 # setup environment
 echo -e "${bldblu}Setting up build environment ${txtrst}"
 . build/envsetup.sh
