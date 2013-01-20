@@ -62,3 +62,27 @@ echo -e ""
 # finished? get elapsed time
 res2=$(date +%s.%N)
 echo "${bldgrn}Total time elapsed: ${txtrst}${grn}$(echo "($res2 - $res1) / 60"|bc ) minutes ($(echo "$res2 - $res1"|bc ) seconds) ${txtrst}"
+
+# Full build
+echo -e "${bldblu} Now building the full ROM, including gapps, audio mods etc... keep patient"
+if [ $DEVICE == crespo ]
+then
+   sh fullbuild.sh crespo phone;
+elif [ $DEVICE == crespo4g ]
+then
+   sh fullbuild.sh crespo4g phone;
+elif [ $DEVICE == d2att ]
+then
+   sh fullbuild.sh d2att phone;
+elif [ $DEVICE == d2spr ]
+then
+   sh fullbuild.sh d2spr phone;
+elif [ $DEVICE == d2tmo ]
+then
+   sh fullbuild.sh d2tmo phone;
+elif [ $DEVICE == d2vzw ]
+then
+   sh fullbuild.sh d2vzw phone;
+else
+   echo "i'm sorry, i can't find your device"
+fi
