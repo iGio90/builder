@@ -19,8 +19,9 @@ bldcya=${txtbld}$(tput setaf 6) #  cyan
 txtrst=$(tput sgr0)             # Reset
 
 DEVICE="$1"
-SYNC="$2"
-THREADS="$3"
+TARGET="$2"
+SYNC="$3"
+THREADS="$4"
 
 # get current version
 VERSION=`date +%Y%m%d`
@@ -65,4 +66,4 @@ echo "${bldgrn}Total time elapsed: ${txtrst}${grn}$(echo "($res2 - $res1) / 60"|
 
 # Full build
 echo "${bldblu} Now building the full ROM, including gapps, audio mods etc... keep patient"
-sh fullbuild.sh $DEVICE phone;
+sh fullbuild.sh $DEVICE $TARGET;
