@@ -6,9 +6,17 @@ sh rom-build.sh d2tmo;
 sh rom-build.sh d2vzw;
 sh rom-build.sh endeavoru;
 sh rom-build.sh evita;
+sh rom-build.sh galaxysmtd;
+sh rom-build.sh jewel;
 sh rom-build.sh i777;
 sh rom-build.sh i9100;
 sh rom-build.sh i9100g;
 sh rom-build.sh i9300;
 sh rom-build.sh maguro;
+sh rom-build.sh mint;
 sh rom-build.sh n7000;
+sh rom-build.sh n7100;
+sh rom-build.sh p970;
+sh rom-build.sh p990;
+sh rom-build.sh ville;
+
