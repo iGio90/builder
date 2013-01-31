@@ -53,6 +53,9 @@ echo -e ""
 echo -e "${bldblu}Lunching your device ${txtrst}"
 lunch "jellybam_$DEVICE-userdebug";
 
+# cleaning build prop
+rm out/target/product/$DEVICE/system/build.prop
+
 echo -e ""
 echo -e "${bldblu}Starting to build jellybam ${txtrst}"
 
